@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1038">
+  <meta name="description" content="A personalized Diwali greeting celebration">
+  <title>Happy Diwali ✨</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="stars" id="stars"></div>
+    <div class="particles" id="welcomeParticles"></div>
+  </div>
+
+  <main>
+    <section class="screen welcome-screen active" id="welcomeScreen" aria-labelledby="welcomeTitle">
+      <div class="arch arch-left"></div>
+      <div class="arch arch-right"></div>
+      <div class="welcome-card">
+        <div class="diya-brand" aria-hidden="true">
+          <span class="flame"></span>
+          <span class="bowl"></span>
+        </div>
+        <p class="eyebrow">A Festival of Lights</p>
+        <h1 id="welcomeTitle">A Little Surprise Is Waiting For You <span>✨</span></h1>
+        <form id="nameForm" novalidate>
+          <label class="sr-only" for="nameInput">Your name</label>
+          <input id="nameInput" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Enter Your Beautiful Name" aria-describedby="nameError">
+          <p class="error" id="nameError" role="alert"></p>
+          <button class="celebrate-button" type="submit">
+            <span>Celebrate Diwali</span><span aria-hidden="true">🪔</span>
+          </button>
+        </form>
+        <div class="welcome-diyas" aria-hidden="true">
+          <div class="mini-diya"><span></span><i></i></div>
+          <div class="mini-diya"><span></span><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen hero-screen" id="heroScreen" aria-labelledby="heroTitle" aria-hidden="true">
+      <canvas id="fireworks" aria-hidden="true"></canvas>
+      <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+      <div class="lantern lantern-left" aria-hidden="true"><span></span></div>
+      <div class="lantern lantern-right" aria-hidden="true"><span></span></div>
+      <div class="rangoli rangoli-left" aria-hidden="true"></div>
+      <div class="rangoli rangoli-right" aria-hidden="true"></div>
+
+      <button class="icon-button back-button" id="backButton" type="button" aria-label="Return to name entry">←</button>
+      <button class="music-button" id="musicButton" type="button" aria-label="Play Diwali song" aria-pressed="false">
+        <span class="music-icon" aria-hidden="true">♫</span>
+        <span id="musicLabel">Play Song</span>
+      </button>
+
+      <div class="hero-content">
+        <div class="sparkle-line" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+        <p class="hero-eyebrow">Wishing you a</p>
+        <h1 id="heroTitle">Happy Diwali, <span id="visitorName"></span>! 🪔</h1>
+        <div class="hero-diyas" aria-hidden="true">
+          <div class="hero-diya"><span></span><i></i></div>
+          <div class="hero-diya big"><span></span><i></i></div>
+          <div class="hero-diya"><span></span><i></i></div>
+        </div>
+        <p class="wish">THIS MESSAGE IS NOT FOR EVERYONE. YOU ARE A SPECIAL PART OF MY LIFE, THAT'S WHY YOU ARE READING THIS. AND I WANT MORE SUCCESS, WEALTH, PEACE, AND A HEALTHY LIFESTYLE TO COME INTO YOUR LIFE.<br><strong>BEST WISHES FROM ADITYA CHOURASIYA</strong></p>
+        <p class="closing"><span>Keep Smiling, Keep Shining!</span> <b aria-label="love">❤️</b></p>
+        <button class="restart-button" id="restartButton" type="button">Create another greeting</button>
+      </div>
+
+      <audio id="diwaliSong" preload="metadata" loop>
+        <source src="assets/diwali-bhajan.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
